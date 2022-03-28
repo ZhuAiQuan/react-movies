@@ -1,7 +1,6 @@
-import react from "react";
+import React from "react";
 import { BrowserRouter as Router } from "react-router-dom";
 import "./App.css";
-import FootBar from "_c/foot-bar";
 import BrowserRouter from "@/router";
 import { Provider } from 'react-redux';
 import store from './store'
@@ -11,10 +10,7 @@ function App() {
     <Provider store={store}>
       <Router>
         <div className="App">
-          <div className="content">
-            <BrowserRouter />
-          </div>
-          <FootBar />
+          <BrowserRouter />
         </div>
       </Router>
     </Provider>
