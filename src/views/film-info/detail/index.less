@@ -1,9 +1,175 @@
 .film-container {
   .film-bg {
-
+    height: 210px;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+    img {
+      width: 100%;
+      position: absolute;
+      top: -140px;
+    }
   }
-  .back {
-    height: 44px;
+  .title {
+    height: 34px;
     background-color: transparent;
+    padding: 5px;
+    position: fixed;
+    width: calc(100% - 10px);
+    top: 0;
+    z-index: 99;
+    .back {
+      width: 30px;
+      height: 30px;
+      margin-top: 2px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+      background-color: rgba(255, 255, 255, .4);
+    }
+    .film-name {
+      line-height: 34px;
+      font-size: 17px;
+      text-align: center;
+      color: transparent;
+    }
+  }
+  .info {
+    padding: 12px 15px;
+    background-color: #fff;
+    .film-title {
+      display: flex;
+      align-items: center;
+      font-size: 18px;
+      line-height: 24px;
+      .name {
+        flex: 4;
+        span {
+          display: inline-block;
+          margin-left: 7px;
+          font-size: 9px;
+          color: #fff;
+          line-height: 14px;
+          padding: 0 2px;
+          background-color: #d2d6dc;
+          border-radius: 2px;
+        }
+      }
+      .grade {
+        flex: 1;
+        text-align: right;
+        color: var(--grade-color);
+        &::after {
+          content: '分';
+          font-size: 10px;
+        }
+      }
+    }
+    .category, .premiereAt, .runtime {
+      font-size: 13px;
+      color: var(--text-color);
+      line-height: 24px;
+    }
+    .premiereAt {
+      &::after {
+        content: '上映';
+      }
+    }
+    .film-description {
+      margin-top: 12px;
+      font-size: 13px;
+      color: var(--text-color);
+      transition: all .3s linear;
+    }
+    .film-description-close {
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 2;
+      overflow: hidden;
+      transition: all .3s linear;
+    }
+    .up-down {
+      text-align: center;
+      transition: all .25s ease-out;
+    }
+    .up-down-rorato {
+      transform: rotate(180deg);
+      transition: all .25s ease-in;
+    }
+  }
+  .actors-container, .photos {
+    margin-top: 10px;
+    background-color: #fff;
+    width: 100%;
+    overflow-x: hidden;
+    .actors-title, .photos-title {
+      padding: 15px;
+      &::before {
+        content: '演职人员';
+        font-size: 16px;
+      }
+    }
+    .photos-title {
+      &::before {
+        content: '剧照';
+      }
+      .all-photos {
+        float: right;
+        font-size: 13px;
+        color: var(--text-color);
+      }
+    }
+    .actors-list {
+      padding-left: 15px;
+      display: flex;
+      .actors-item {
+        margin-right: 10px;
+        width: 85px;
+        img {
+          width: 100%;
+        }
+        div {
+          font-size: 12px;
+          color: var(--text-color);
+          margin-top: 10px;
+          text-align: center;
+          display: -webkit-box;
+          -webkit-box-orient: vertical;
+          -webkit-line-clamp: 1;
+          overflow: hidden;
+          &:last-child {
+            margin-top: 0;
+          }
+        }
+      }
+    }
+    .actors-context {
+      width: 100%;
+      overflow-x: auto;
+      scroll-behavior: smooth;
+      &::-webkit-scrollbar {
+        width: 0;
+      }
+    }
+  }
+  .photos {
+    .photos-body {
+      width: 100%;
+      overflow-x: auto;
+      padding-left: 15px;
+      .photos-content {
+        display: flex;
+        align-items: center;
+        img {
+          width: 150px;
+          margin-right: 10px;
+        }
+      }
+      &::-webkit-scrollbar {
+        width: 0;
+      }
+    }
   }
 }

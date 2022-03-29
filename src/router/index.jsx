@@ -2,7 +2,7 @@
  * @Description: xingp，yyds
  * @Author: zaq
  * @Date: 2022-02-21 16:31:48
- * @LastEditTime: 2022-03-28 17:47:54
+ * @LastEditTime: 2022-03-29 17:43:14
  * @LastEditors: zaq
  * @Reference:
  */
@@ -16,6 +16,7 @@ const Info = lazy(() => import("@/views/info"));
 const Mine = lazy(() => import("@/views/mine"));
 const NotFound = lazy(() => import("@/views/404"));
 const Detail = lazy(() => import("@/views/film-info/detail"));
+const AllPhotos = lazy(() => import("@/views/film-info/photos"))
 
 export default function index() {
   return (
@@ -29,6 +30,7 @@ export default function index() {
             <Route path="mine" element={<Mine />}></Route>
           </Route>
           <Route path="film-detail/:id" element={<Detail />}></Route>
+          <Route path="photos" element={<AllPhotos />}></Route>
           <Route path="404" element={<NotFound />}></Route>
           <Route path="*" element={<Navigate to="404" />}></Route>
         </Routes>

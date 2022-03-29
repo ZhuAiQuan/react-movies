@@ -2,7 +2,7 @@
  * @Description: xingp，yyds
  * @Author: zaq
  * @Date: 2022-02-21 17:29:55
- * @LastEditTime: 2022-03-28 16:33:40
+ * @LastEditTime: 2022-03-29 17:37:26
  * @LastEditors: zaq
  * @Reference:
  */
@@ -11,6 +11,7 @@ import "./index.less";
 import { useSelector, useDispatch } from 'react-redux'
 import { Button } from 'antd-mobile'
 import { context } from '../../views/home/content'
+import { useNavigate } from 'react-router-dom'
 
 export default function Item(props) {
   // const {
@@ -24,6 +25,7 @@ export default function Item(props) {
   //   type,
   // } = props;
   const token = useSelector(state => state.token);
+  const router = useNavigate();
   const { type } = useContext(context)
   useEffect(() => {
     console.log(token, new Date().getTime())
@@ -37,6 +39,7 @@ export default function Item(props) {
         token: 'yyds有一点骚'
       }
     });
+    router(`/film-detail/0`)
   }
   return (
     <div className="list-item" onClick={updateData}>
