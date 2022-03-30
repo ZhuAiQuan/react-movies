@@ -2,7 +2,7 @@
  * @Description: xingp，yyds
  * @Author: zaq
  * @Date: 2022-02-21 16:31:48
- * @LastEditTime: 2022-03-29 17:43:14
+ * @LastEditTime: 2022-03-30 10:50:35
  * @LastEditors: zaq
  * @Reference:
  */
@@ -26,9 +26,9 @@ export default function index() {
           <Route path="/" element={<Layouts />}>
             <Route path="home" element={<Home />}></Route>
             <Route path="cinemas" element={<Cinemas />}></Route>
-            <Route path="info" element={<Info />}></Route>
             <Route path="mine" element={<Mine />}></Route>
           </Route>
+          <Route path="info" element={<Info />}></Route>
           <Route path="film-detail/:id" element={<Detail />}></Route>
           <Route path="photos" element={<AllPhotos />}></Route>
           <Route path="404" element={<NotFound />}></Route>

@@ -2,7 +2,7 @@
  * @Description: xingp，yyds
  * @Author: zaq
  * @Date: 2022-02-21 17:29:55
- * @LastEditTime: 2022-03-30 09:29:45
+ * @LastEditTime: 2022-03-30 10:48:55
  * @LastEditors: zaq
  * @Reference:
  */
@@ -43,6 +43,9 @@ export default function Item(props) {
     // });
     router(`/film-detail/0`)
   }
+  function goBuy(e) {
+    e.stopPropagation();
+  }
   return (
     <div className="list-item" onClick={updateData}>
       <div className="avatar">
@@ -78,7 +81,7 @@ export default function Item(props) {
         
       </div>
       <div className="buy">
-        <Button color='warning' fill='outline' size='mini'>
+        <Button color='warning' fill='outline' size='mini' onClick={goBuy}>
           {
             +type === 1 ? '购买' : '预购'
           }
