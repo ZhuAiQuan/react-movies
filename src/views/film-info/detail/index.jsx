@@ -2,22 +2,23 @@
  * @Description: xingp，yyds
  * @Author: zaq
  * @Date: 2022-03-28 17:04:48
- * @LastEditTime: 2022-03-29 17:39:13
+ * @LastEditTime: 2022-03-30 09:49:20
  * @LastEditors: zaq
  * @Reference: 
  */
-import React from 'react';
-import { useParams } from 'react-router-dom';
+import React, {useEffect} from 'react';
+import { useParams, useNavigate } from 'react-router-dom';
 import {LeftOutline} from 'antd-mobile-icons';
 import bg from '@/assets/images/batman.jpg'
 import FilmInfo from './info';
 import ActorsList from './actors';
 import FilmPhotos from './photos';
-import { useNavigate } from 'react-router-dom'
+import { useDispatch } from 'react-redux'
 import './index.less'
 
 export default function FilmDetail() {
   const {id} = useParams();
+  const dispatch = useDispatch();
   const actors = [
     {
       name: '科林·法瑞尔',
@@ -57,6 +58,14 @@ export default function FilmDetail() {
     "https://pic.maizuo.com/usr/2022/c9bc84072c676395baa8ab39c5a6c753.jpg",
     "https://pic.maizuo.com/usr/2022/ef72eb0274770994e55d5f3616bed7f9.jpg",
   ]
+  useEffect(() => {
+    dispatch({
+      type: 'photo_list',
+      data: {
+        photos
+      }
+    })
+  }, [photos])
   const router = useNavigate();
   return (
     <div className='film-container'>

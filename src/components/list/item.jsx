@@ -2,7 +2,7 @@
  * @Description: xingp，yyds
  * @Author: zaq
  * @Date: 2022-02-21 17:29:55
- * @LastEditTime: 2022-03-29 17:37:26
+ * @LastEditTime: 2022-03-30 09:29:45
  * @LastEditors: zaq
  * @Reference:
  */
@@ -24,21 +24,23 @@ export default function Item(props) {
   //   premiereAt,
   //   type,
   // } = props;
-  const token = useSelector(state => state.token);
+  // const token = useSelector(state => {
+  //   debugger
+  // });
   const router = useNavigate();
   const { type } = useContext(context)
-  useEffect(() => {
-    console.log(token, new Date().getTime())
-  }, [token])
+  // useEffect(() => {
+  //   console.log(token, new Date().getTime())
+  // }, [token])
   
-  const dispatch = useDispatch()
+  // const dispatch = useDispatch()
   function updateData() {
-    dispatch({
-      type: 'increment',
-      data: {
-        token: 'yyds有一点骚'
-      }
-    });
+    // dispatch({
+    //   type: 'increment',
+    //   data: {
+    //     token: 'yyds有一点骚'
+    //   }
+    // });
     router(`/film-detail/0`)
   }
   return (

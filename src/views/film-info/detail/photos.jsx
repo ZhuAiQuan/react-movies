@@ -2,14 +2,14 @@
  * @Description: xingp，yyds
  * @Author: zaq
  * @Date: 2022-03-29 15:02:11
- * @LastEditTime: 2022-03-29 17:44:42
+ * @LastEditTime: 2022-03-30 09:49:59
  * @LastEditors: zaq
  * @Reference: 
  */
 import React, {useState} from 'react';
 import {RightOutline} from 'antd-mobile-icons';
 import ViewImage from '_c/viewImage';
-import {useNavigate} from 'react-router-dom'
+import {useNavigate} from 'react-router-dom';
 
 export default function FilmPhotos(props) {
   const router = useNavigate();
