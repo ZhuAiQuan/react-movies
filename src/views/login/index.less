@@ -1,0 +1,76 @@
+.login-content {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background-color: #fff;
+  .logo {
+    margin-top: 80px;
+    margin-bottom: 40px;
+    text-align: center;
+    img {
+      width: 60px;
+    }
+  }
+  .login-form {
+    padding: 0 25px 25px 25px;
+    .tips {
+      font-size: 13px;
+      color: var(--text-color);
+      text-align: right;
+      margin-top: 15px;
+    }
+    .input-content {
+      position: relative;
+      margin-right: 90px;
+      .login-input {
+        border: none;
+        padding: 20px 0;
+        color: var(--text-color);
+        width: 100%;
+        &:focus-visible {
+          outline: none;
+        }
+      }
+      .close-icon {
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 9;
+        width: 18px;
+        height: 18px;
+        border-radius: 50%;
+        background-color: rgb(189, 192, 197);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all .3s linear;
+      }
+      .seedcode {
+        position: absolute;
+        top: 50%;
+        right: -90px;
+        transform: translateY(-50%);
+        color: var(--text-color);
+        transition: all .25s ease-in;
+      }
+      .seedcode-active {
+        color: #2c3e50;
+        transition: all .3s ease-out;
+      }
+      .check-value {
+        position: absolute;
+        bottom: -18px;
+        color: red;
+        z-index: 10;
+      }
+      &::after {
+        content: '';
+        display: block;
+        height: 1px;
+        width: calc(100% + 90px);
+        background-color: #ededed;
+      }
+    }
+  }
+}

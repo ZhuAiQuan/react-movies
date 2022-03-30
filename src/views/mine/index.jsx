@@ -2,7 +2,7 @@
  * @Description: xingp，yyds
  * @Author: zaq
  * @Date: 2022-02-21 16:27:44
- * @LastEditTime: 2022-03-30 13:57:18
+ * @LastEditTime: 2022-03-30 15:23:00
  * @LastEditors: zaq
  * @Reference: 
  */
@@ -15,10 +15,12 @@ import redbIcon from '@/assets/images/redb.png';
 import yeIcon from '@/assets/images/ye.png';
 import helpIcon from '@/assets/images/help.png';
 import settingIcon from '@/assets/images/setting.png';
-import CellGroup from './cellGroup'
+import CellGroup from './cellGroup';
+import { useNavigate } from 'react-router-dom'
 import './index.less'
 
 export default function Mine() {
+  const router = useNavigate();
   const [userinfo, updateInfo] = useState({
     name: '',
     avatar: ''
@@ -67,6 +69,7 @@ export default function Mine() {
         // go page 
       } else {
         // login
+        router('/login')
       }
     }
   }
@@ -76,7 +79,7 @@ export default function Mine() {
         <div className='avatar'>
           <img src={userinfo.avatar ? userinfo.avatar : avatar} />
         </div>
-        <div className='username'>
+        <div className='username' onClick={onTouchItem()}>
           {
             userinfo.name 
               ? userinfo.name
