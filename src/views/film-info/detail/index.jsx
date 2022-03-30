@@ -2,13 +2,14 @@
  * @Description: xingp，yyds
  * @Author: zaq
  * @Date: 2022-03-28 17:04:48
- * @LastEditTime: 2022-03-30 09:49:20
+ * @LastEditTime: 2022-03-30 10:42:21
  * @LastEditors: zaq
  * @Reference: 
  */
 import React, {useEffect} from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import {LeftOutline} from 'antd-mobile-icons';
+import {Button, Modal} from 'antd-mobile'
 import bg from '@/assets/images/batman.jpg'
 import FilmInfo from './info';
 import ActorsList from './actors';
@@ -67,6 +68,23 @@ export default function FilmDetail() {
     })
   }, [photos])
   const router = useNavigate();
+  const onTips = () => {
+    Modal.alert({
+      closeOnMaskClick: true,
+      title: '提示',
+      actions: [
+        {
+          key: 'know',
+          text: '我知道啦！',
+          warning: true
+        }
+      ],
+      content: '本项目仅作为卖座电影的仿写对象，不支持购买等操作，如需购买电影票，请去官网操作！',
+      afterClose: () => {
+        debugger
+      }
+    })
+  }
   return (
     <div className='film-container'>
       <div className='title'>
@@ -81,6 +99,9 @@ export default function FilmDetail() {
       <FilmInfo />
       <ActorsList actors={actors} />
       <FilmPhotos photos={photos} />
+      <Button block color='warning' size='large' className='foot-btn' onClick={onTips}>
+        选座购票
+      </Button>
     </div>
   )
 }
