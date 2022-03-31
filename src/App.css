@@ -5,6 +5,7 @@
   --text-color: #797d82;
   --text-background-color: #d2d6dc;
   --body-background-color: #f4f4f4;
+  --border-color-active: #ff5f16;
 }
 .App {
   height: 100vh;

@@ -1,0 +1,20 @@
+.city-content {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 10px 0 0 10px;
+  &-item {
+    width: calc(25% - 10px);
+    margin-right: 10px;
+    margin-bottom: 15px;
+    border: 1px solid rgba(210,214,220,.5);
+    box-sizing: border-box;
+    line-height: 27px;
+    text-align: center;
+    border-radius: 3px;
+    color: var(--text-color);
+  }
+  &-item-active {
+    border-color: var(--border-color-active);
+    color: var(--border-color-active);
+  }
+}
