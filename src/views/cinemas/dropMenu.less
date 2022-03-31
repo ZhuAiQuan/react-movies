@@ -18,3 +18,28 @@
     color: var(--border-color-active);
   }
 }
+.app-content {
+  padding: 0 15px;
+  &-item {
+    line-height: 44px;
+    position: relative;
+    padding-left: 20px;
+    &::after {
+      content: '';
+      display: block;
+      height: 1px;
+      background-color: var(--text-background-color);
+      transform: scaleY(.5);
+    }
+    &-active {
+      color: var(--border-color-active);
+    }
+    .show-check {
+      margin-right: 10px;
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+    }
+  }
+}

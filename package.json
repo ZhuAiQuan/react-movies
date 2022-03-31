@@ -6,7 +6,7 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0 -n ./.changelog.config.js"
+    "changelog": "conventional-changelog -p angular -i README.md -s -r 0 -n ./.changelog.config.js"
   },
   "dependencies": {
     "antd-mobile": "^5.0.0",

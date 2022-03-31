@@ -2,14 +2,14 @@
  * @Description: xingp，yyds
  * @Author: zaq
  * @Date: 2022-02-21 16:26:57
- * @LastEditTime: 2022-03-31 16:46:04
+ * @LastEditTime: 2022-03-31 17:48:01
  * @LastEditors: zaq
  * @Reference:
  */
 import React, {useState, useRef} from "react";
 import { NavBar } from "antd-mobile";
 import { DownOutline, SearchOutline } from "antd-mobile-icons";
-import DropMenu, { CityItem, AppPay, LastGo } from './dropMenu'
+import DropMenu, { CityItem, AppPay } from './dropMenu'
 import "./index.less";
 
 export default function Cinemas() {
@@ -31,7 +31,7 @@ export default function Cinemas() {
     {
       title: '最近去过',
       key: 'last',
-      children: <LastGo />
+      children: <AppPay app={last} onChange={onCheckTitle} MenuKey='last' />
     }
   ])
   
