@@ -2,7 +2,7 @@
  * @Description: xingp，yyds
  * @Author: zaq
  * @Date: 2022-03-31 10:08:18
- * @LastEditTime: 2022-03-31 17:46:32
+ * @LastEditTime: 2022-04-01 09:51:51
  * @LastEditors: zaq
  * @Reference:
  */
@@ -16,7 +16,7 @@ const DropMenu = forwardRef((props, ref) => {
   return (
     <Dropdown ref={ref}>
       {menuList.map((item) => (
-        <Dropdown.Item key={item.key} title={item.title}>
+        <Dropdown.Item key={`${item.key}+${item.title}`} title={item.title}>
           {item.children}
         </Dropdown.Item>
       ))}
@@ -25,12 +25,11 @@ const DropMenu = forwardRef((props, ref) => {
 });
 
 export const CityItem = (props) => {
-  const { city, onChange, MenuKey } = props;
-  const [checkItem, updateItem] = useState("全城");
+  const { city, onChange, MenuKey, title } = props;
   const onChangeItem = (item) => {
-    updateItem(item);
     onChange(MenuKey, item);
   };
+  const checkItem = title(MenuKey);
   return (
     <div className="city-content">
       {city.map((item) => (
@@ -48,10 +47,9 @@ export const CityItem = (props) => {
   );
 };
 
-export const AppPay = ({app, onChange, MenuKey}) => {
-  const [checkItem, updateItem] = useState(MenuKey === 'app' ? "APP订票" : '最近去过');
+export const AppPay = ({app, onChange, MenuKey, title}) => {
+  const checkItem = title(MenuKey);
   const onChangeItem = (item) => {
-    updateItem(item)
     onChange(MenuKey, item)
   }
   return (

@@ -6,4 +6,87 @@
       color: #000;
     }
   }
+  .adm-dropdown {
+    &::before {
+      content: "";
+      display: block;
+      height: 1px;
+      width: 100%;
+      background-color: #ededed;
+      transform: scaleY(0.5);
+      opacity: .7;
+    }
+  }
+  .cinemas-list-content {
+    background-color: #fff;
+    &-item {
+      padding: 15px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      .item-left {
+        width: calc(100% - 85px);
+        padding-right: 15px;
+        .cinemas-name {
+          font-size: 15px;
+          overflow:hidden;
+          text-overflow:ellipsis;
+          white-space:nowrap
+        }
+        .cinemas-address {
+          font-size: 12px;
+          color: var(--text-color);
+          margin-top: 5px;
+          overflow:hidden;
+          text-overflow:ellipsis;
+          white-space:nowrap
+        }
+      }
+      .item-right {
+        width: 70px;
+        overflow: hidden;
+        text-align: right;
+        .cinemas-price {
+          font-size: 15px;
+          color: var(--border-color-active);
+          &::before {
+            content: '￥';
+            font-size: 11px;
+          }
+          &::after {
+            content: '起';
+            font-size: 11px;
+          }
+        }
+        .cinemas-distance {
+          margin-top: 5px;
+          color: var(--text-color);
+          font-size: 12px;
+          &::after{
+            content: 'km';
+          }
+        }
+      }
+    }
+    &-item-body {
+      &::after {
+        content: "";
+        display: block;
+        height: 1px;
+        width: 100%;
+        background-color: #ededed;
+        transform: scaleY(0.5);
+        opacity: .7;
+      }
+    }
+    &::before {
+      content: "";
+      display: block;
+      height: 1px;
+      width: 100%;
+      background-color: #ededed;
+      transform: scaleY(0.5);
+      opacity: .7;
+    }
+  }
 }
