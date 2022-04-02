@@ -2,12 +2,13 @@
  * @Description: xingp，yyds
  * @Author: zaq
  * @Date: 2022-02-21 16:27:33
- * @LastEditTime: 2022-03-30 11:12:10
+ * @LastEditTime: 2022-04-02 10:41:46
  * @LastEditors: zaq
  * @Reference:
  */
 import React, { useState, useEffect } from "react";
-import {useNavigate} from 'react-router-dom'
+import {useNavigate} from 'react-router-dom';
+import {getFilmsInfo} from '@/api'
 import './index.less'
 
 export default function Info() {
@@ -16,7 +17,7 @@ export default function Info() {
   // 解析html富文本数据成对象
   function toParseNode(str) {
     return str
-      .substring(3, child.length - 4)
+      .substring(3, str.length - 4)
       .split("</a>")
       .map((item) => {
         let start;
@@ -46,12 +47,18 @@ export default function Info() {
   function toRouterPush(item) {
     return () => {
       const {id, url} = item;
-      if (id) router.push(`/film-detail/${id}`)
+      if (id) router(`/film-detail/${id}`)
       else window.open(url)
     }
   }
   useEffect(() => {
     // request api sync
+    getFilmsInfo().then(res => {
+      if (!res.status) {
+        const {content} = res.data.data;
+        updateInfo(() => toParseNode(content))
+      }
+    })
   }, []);
   return (
     <div className="info-content">

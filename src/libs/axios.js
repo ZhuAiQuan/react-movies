@@ -2,7 +2,7 @@
  * @Description: xingp，yyds
  * @Author: zaq
  * @Date: 2022-04-01 13:54:41
- * @LastEditTime: 2022-04-01 14:16:30
+ * @LastEditTime: 2022-04-02 10:22:01
  * @LastEditors: zaq
  * @Reference: 
  */
@@ -35,9 +35,8 @@ export default class HttpRequest {
     )
     instance.interceptors.response.use(
       res => {
-        console.log(res);
         this.destroy(key);
-        return res
+        return res.data
       },
       err => {
         this.destroy(key);

@@ -2,7 +2,7 @@
  * @Description: xingp，yyds
  * @Author: zaq
  * @Date: 2022-04-01 13:21:48
- * @LastEditTime: 2022-04-01 17:35:04
+ * @LastEditTime: 2022-04-02 10:40:58
  * @LastEditors: zaq
  * @Reference: 
  */
@@ -17,6 +17,19 @@ export const getGeolocate = (latitude, longitude) => {
       'X-Host': 'mall.film-ticket.city.locate',
       latitude,
       longitude
+    }
+  })
+}
+
+export const getFilmsInfo = () => {
+  return axios.request({
+    url: '/gateway',
+    method: 'get',
+    params: {
+      actId: 'ElzMZU125260'
+    },
+    headers: {
+      'X-Host': 'mall.act.static-page.info'
     }
   })
 }

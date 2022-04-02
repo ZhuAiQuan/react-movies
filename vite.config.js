@@ -11,4 +11,13 @@ export default defineConfig({
       '_c': path.resolve(__dirname, './src/components')
     }
   },
+  server: {
+    proxy: {
+      '/api': {
+        target: 'https://m.maizuo.com',
+        changeOrigin: true,
+        rewrite: (path) => path.replace(/^\/api/, '')
+      }
+    }
+  }
 })

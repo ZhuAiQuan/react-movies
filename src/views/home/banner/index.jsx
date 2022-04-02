@@ -2,7 +2,7 @@
  * @Description: xingp，yyds
  * @Author: zaq
  * @Date: 2022-03-28 14:46:37
- * @LastEditTime: 2022-03-28 15:09:03
+ * @LastEditTime: 2022-04-02 10:34:06
  * @LastEditors: zaq
  * @Reference: 
  */
@@ -11,10 +11,10 @@ import { Swiper, Toast } from 'antd-mobile';
 import { DownOutline } from 'antd-mobile-icons'
 import './index.less'
 
-function Banner() {
+function Banner({cityName}) {
   return (
     <div className='banner-container'>
-      <SelectBtn />
+      <SelectBtn cityName={cityName} />
       <Swiper className="banner-content">{items}</Swiper>
     </div>
   )
@@ -33,10 +33,10 @@ const items = colors.map((color, index) => (
     </div>
   </Swiper.Item>
 ))
-const SelectBtn = () => {
+const SelectBtn = ({cityName}) => {
   return (
     <div className='geolocation'>
-      深圳
+      {cityName || '深圳'}
       <DownOutline className="icon-down" fontSize={10} />
     </div>
   )
