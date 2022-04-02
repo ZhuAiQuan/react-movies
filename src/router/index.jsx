@@ -2,7 +2,7 @@
  * @Description: xingp，yyds
  * @Author: zaq
  * @Date: 2022-02-21 16:31:48
- * @LastEditTime: 2022-03-31 13:14:10
+ * @LastEditTime: 2022-04-02 09:31:04
  * @LastEditors: zaq
  * @Reference:
  */
@@ -25,6 +25,7 @@ export default function index() {
       <Suspense fallback={<Loading />}>
         <Routes>
           <Route path="/" element={<Layouts />}>
+            <Route index element={<Navigate to="home" />} />
             <Route path="home" element={<Home />}></Route>
             <Route path="cinemas" element={<Cinemas />}></Route>
             <Route path="mine" element={<Mine />}></Route>
