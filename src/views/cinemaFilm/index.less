@@ -198,5 +198,25 @@
         border-bottom: 10px solid #fff;
       }
     }
+    .film-info {
+      padding: 15px 0;
+      text-align: center;
+      
+      .film-name {
+        margin-bottom: 10px;
+        span {
+          margin-left: 6px;
+          color: var(--grade-color);
+          &::after {
+            content: '分';
+            font-size: 10px;
+          }
+        }
+      }
+      .film-desc {
+        text-align: center;
+        color: var(--text-color);
+      }
+    }
   }
 }

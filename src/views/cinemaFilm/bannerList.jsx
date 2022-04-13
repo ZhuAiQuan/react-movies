@@ -2,7 +2,7 @@
  * @Description: xingp，yyds
  * @Author: zaq
  * @Date: 2022-04-13 14:01:27
- * @LastEditTime: 2022-04-13 16:50:20
+ * @LastEditTime: 2022-04-13 17:05:49
  * @LastEditors: zaq
  * @Reference:
  */
@@ -22,7 +22,7 @@ export default function BannerList(props) {
   //   }
   // ]
   const [loopIndex, updateLoopIndex] = useState(0);
-  const [translateX, updateTranslateX] = useState("50%");
+  // const [translateX, updateTranslateX] = useState("50%");
   const [moveData, changeData] = useState({
     state: false,
     startX: 0,
@@ -105,6 +105,29 @@ export default function BannerList(props) {
               </div>
             );
           })}
+        </div>
+      </div>
+      <div className="film-info">
+        <div className="film-name">
+          {
+            films[loopIndex].name
+          }
+          <span>{
+            films[loopIndex].grade
+          }</span>
+        </div>
+        <div className="film-desc">
+          {
+            films[loopIndex].category
+          }
+          |
+          {
+            films[loopIndex].runtime
+          }
+          分钟 | 
+          {
+            films[loopIndex].director
+          }
         </div>
       </div>
     </div>
