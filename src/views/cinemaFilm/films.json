@@ -1,0 +1,448 @@
+{
+    "status": 0,
+    "data": {
+        "films": [
+            {
+                "filmId": 5920,
+                "name": "边缘行者",
+                "poster": "https://pic.maizuo.com/usr/movie/afdef208d7b72a950b164c007e8a0837.jpg",
+                "actors": [
+                    {
+                        "name": "谭耀文",
+                        "role": "演员",
+                        "avatarAddress": "https://pic.maizuo.com/usr/movie/9bb5e7a0d1ae00cb64370802c0ca812c.jpg"
+                    },
+                    {
+                        "name": "黄明升",
+                        "role": "导演",
+                        "avatarAddress": "https://pic.maizuo.com/usr/movie/a1b031211683411b6aea7288cdaa0233.jpg"
+                    },
+                    {
+                        "name": "任贤齐",
+                        "role": "演员",
+                        "avatarAddress": "https://pic.maizuo.com/usr/movie/42ff2bb4fc35cfc4c569cce29b1dc574.jpg"
+                    },
+                    {
+                        "name": "任达华",
+                        "role": "演员",
+                        "avatarAddress": "https://pic.maizuo.com/usr/movie/56087e1d22305c93dc9c30441f0b60e0.jpg"
+                    },
+                    {
+                        "name": "方中信",
+                        "role": "演员",
+                        "avatarAddress": "https://pic.maizuo.com/usr/movie/cdd4b9595ba13f68a1d145902c811bbf.jpg"
+                    }
+                ],
+                "director": "黄明升",
+                "category": "犯罪|动作",
+                "showDate": [
+                    1649952000
+                ],
+                "synopsis": "1997年回归前夕，多方势力矛盾激化，暴力事件频发。巨变当前，黑帮龙头林耀昌（任达华 饰）对亲信阿骆（任贤齐 饰）委以帮派重任。多重身份的阿骆在黑白边缘行走，一场除暴行动正悄然掀开反杀的序幕。",
+                "filmType": {
+                    "name": "2D",
+                    "value": 1
+                },
+                "nation": "中国香港,中国大陆",
+                "language": "",
+                "videoId": "",
+                "premiereAt": 1649980800,
+                "timeType": 3,
+                "runtime": 113,
+                "grade": "7.7",
+                "item": {
+                    "name": "2D",
+                    "type": 1
+                },
+                "isPresale": false,
+                "isSale": false
+            },
+            {
+                "filmId": 5930,
+                "name": "神奇动物:邓布利多之谜",
+                "poster": "https://pic.maizuo.com/usr/movie/46015aa8e08a661e7c559b6e7407ce08.jpg",
+                "actors": [
+                    {
+                        "name": "大卫·叶茨",
+                        "role": "导演",
+                        "avatarAddress": "https://pic.maizuo.com/usr/movie/09f20e45368d9b72f0486832cdca3515.jpg"
+                    },
+                    {
+                        "name": "埃迪·雷德梅恩",
+                        "role": "Newt Scamander",
+                        "avatarAddress": "https://pic.maizuo.com/usr/movie/abc90de5146a433722e271d7f50f2307.jpg"
+                    },
+                    {
+                        "name": "艾莉森·苏朵儿",
+                        "role": "Queenie Goldstein",
+                        "avatarAddress": "https://pic.maizuo.com/usr/movie/9ba30918f6711258eae858b70d1de1cb.jpg"
+                    },
+                    {
+                        "name": "裘德·洛",
+                        "role": "Albus Dumbledore",
+                        "avatarAddress": "https://pic.maizuo.com/usr/movie/36153b8976833af21d0b98f6ff162bbd.jpg"
+                    },
+                    {
+                        "name": "凯瑟琳·沃特森",
+                        "role": "Tina Goldstein",
+                        "avatarAddress": "https://pic.maizuo.com/usr/movie/896888f70e69cb68ed9e87f0424e95c1.jpg"
+                    }
+                ],
+                "director": "大卫·叶茨",
+                "category": "奇幻|冒险",
+                "showDate": [
+                    1649779200
+                ],
+                "synopsis": "阿不思·邓布利多教授（裘德·洛 饰）意识到强大的黑巫师盖勒特·格林德沃（麦斯·米科尔森 饰）正试图夺取魔法世界的控制权。邓布利多了解仅凭他一人之力，将无法阻止格林德沃，于是他委托魔法动物学家纽特·斯卡曼德（埃迪·雷德梅恩 饰）带领一支精良的团队——成员包括男巫、女巫及一位勇敢的麻瓜面包师，来共同执行这项危险任务。一路上他们会遇到各式各样的神奇动物，既有老朋友，也有前所未见的神秘生物；同时他们也随时会与格林德沃不断壮大的追随者发生冲突。这次行动的风险是如此之高……邓布利多还能袖手旁观多久？",
+                "filmType": {
+                    "name": "2D",
+                    "value": 1
+                },
+                "nation": "美国,英国",
+                "language": "",
+                "videoId": "",
+                "premiereAt": 1649376000,
+                "timeType": 3,
+                "runtime": 143,
+                "grade": "7.8",
+                "item": {
+                    "name": "2D",
+                    "type": 1
+                },
+                "isPresale": false,
+                "isSale": false
+            },
+            {
+                "filmId": 5912,
+                "name": "月球陨落",
+                "poster": "https://pic.maizuo.com/usr/movie/b96d9dff31598616833dced2e0c0916b.jpg",
+                "actors": [
+                    {
+                        "name": "约翰·布莱德利",
+                        "role": "KC Houseman",
+                        "avatarAddress": "https://pic.maizuo.com/usr/movie/ed97d57b8fc0faf7e85c843366ce87a3.jpg"
+                    },
+                    {
+                        "name": "迈克尔·佩纳",
+                        "role": "Tom Lopez",
+                        "avatarAddress": "https://pic.maizuo.com/usr/movie/c96adbeb5b5e902da8b9625d4fb4e942.jpg"
+                    },
+                    {
+                        "name": "哈莉·贝瑞",
+                        "role": "Jo Fowler",
+                        "avatarAddress": "https://pic.maizuo.com/usr/movie/d979fb3ba88429c6294d4efcec8f2778.jpg"
+                    },
+                    {
+                        "name": "帕特里克·威尔森",
+                        "role": "Brian Harper",
+                        "avatarAddress": "https://pic.maizuo.com/usr/movie/8cc74453876032055c7cb549b0d16d5e.jpg"
+                    },
+                    {
+                        "name": "罗兰·艾默里奇",
+                        "role": "导演",
+                        "avatarAddress": "https://pic.maizuo.com/usr/movie/1aa6768fb92470214165bd139f265329.jpg"
+                    }
+                ],
+                "director": "罗兰·艾默里奇",
+                "category": "灾难|科幻",
+                "showDate": [
+                    1649779200
+                ],
+                "synopsis": "仰望星空，⽉亮⼀向是那么的永恒。但在不久的将来，⽉球被⼀股神秘的⼒量驱使离开⽉球轨道，向我们熟知的地球⻜速⽽来，⽽在众⼈都放弃希望，地球上如世界末⽇⼀般时，⼀⽀看似乌合之众的团队决定为地球进⾏最后⼀搏，冒险为保卫⼈类最后⼀战。",
+                "filmType": {
+                    "name": "2D",
+                    "value": 1
+                },
+                "nation": "英国,美国",
+                "language": "",
+                "videoId": "",
+                "premiereAt": 1648166400,
+                "timeType": 3,
+                "runtime": 130,
+                "grade": "7.5",
+                "item": {
+                    "name": "2D",
+                    "type": 1
+                },
+                "isPresale": false,
+                "isSale": false
+            },
+            {
+                "filmId": 5901,
+                "name": "新蝙蝠侠",
+                "poster": "https://pic.maizuo.com/usr/movie/a520cd29e1672a0a4115f9de3887f6f4.jpg",
+                "actors": [
+                    {
+                        "name": "马特·里夫斯",
+                        "role": "导演",
+                        "avatarAddress": "https://pic.maizuo.com/usr/movie/165573d01ffb19a4455ad9572023704f.jpg"
+                    },
+                    {
+                        "name": "罗伯特·帕丁森",
+                        "role": "Bruce Wayne / Batman",
+                        "avatarAddress": "https://pic.maizuo.com/usr/movie/e89689d04cabdd63a0c851a5ce9af93b.jpg"
+                    },
+                    {
+                        "name": "佐伊·克拉维兹",
+                        "role": "猫女",
+                        "avatarAddress": "https://pic.maizuo.com/usr/movie/c73c9973853b590a097f154232534509.jpg"
+                    },
+                    {
+                        "name": "科林·法瑞尔",
+                        "role": "Oswald Cobblepot / The Penguin",
+                        "avatarAddress": "https://pic.maizuo.com/usr/movie/3be2bb3d7f84dc0d39cde92dcc459ba7.jpg"
+                    },
+                    {
+                        "name": "保罗·达诺",
+                        "role": "Edward Nashton / The Riddler",
+                        "avatarAddress": "https://pic.maizuo.com/usr/movie/849a100e5bf627a4515cef6e34f1e2ba.jpg"
+                    }
+                ],
+                "director": "马特·里夫斯",
+                "category": "动作|剧情|科幻",
+                "showDate": [
+                    1649779200
+                ],
+                "synopsis": "布鲁斯·韦恩化身蝙蝠侠于哥谭市行侠仗义两年后，罪犯皆闻风丧胆，他也因此深入接触到哥谭市的阴暗面。他潜行于哥谭市腐败的政要名流关系网中，身边仅有的几个值得信赖的盟友——管家阿尔弗雷德·潘尼沃斯与詹姆斯·戈登警长。这位独行的“义警侠探”在哥谭市民心中已成为“复仇”二字最当仁不让的代名词。",
+                "filmType": {
+                    "name": "2D",
+                    "value": 1
+                },
+                "nation": "美国",
+                "language": "",
+                "videoId": "",
+                "premiereAt": 1647561600,
+                "timeType": 3,
+                "runtime": 175,
+                "grade": "7.5",
+                "item": {
+                    "name": "2D",
+                    "type": 1
+                },
+                "isPresale": false,
+                "isSale": false
+            },
+            {
+                "filmId": 5898,
+                "name": "神秘海域",
+                "poster": "https://pic.maizuo.com/usr/movie/a17030216bc281dfc04c0964bd911497.jpg",
+                "actors": [
+                    {
+                        "name": "鲁本·弗雷斯彻",
+                        "role": "导演",
+                        "avatarAddress": "https://pic.maizuo.com/usr/movie/d20f1b6147200c477620e659c13cad08.jpg"
+                    },
+                    {
+                        "name": "汤姆·赫兰德",
+                        "role": "Nathan Drake",
+                        "avatarAddress": "https://pic.maizuo.com/usr/movie/ad9c42c11dd514373918b7adaac17f52.jpg"
+                    },
+                    {
+                        "name": "马克·沃尔伯格",
+                        "role": "Victor Sullivan",
+                        "avatarAddress": "https://pic.maizuo.com/usr/movie/b337757d1e6843f5a1b974aa6c37bce6.jpg"
+                    },
+                    {
+                        "name": "索菲娅·阿里",
+                        "role": "Chloe Frazer",
+                        "avatarAddress": "https://pic.maizuo.com/usr/movie/7cdf59184a916726350c2ae032d1d372.jpg"
+                    },
+                    {
+                        "name": "塔蒂·加布里埃",
+                        "role": "Braddock",
+                        "avatarAddress": "https://pic.maizuo.com/usr/movie/1bad524a3ad9667b04d762f539935ffc.jpg"
+                    }
+                ],
+                "director": "鲁本·弗雷斯彻",
+                "category": "动作|冒险",
+                "showDate": [
+                    1649779200
+                ],
+                "synopsis": "足智多谋的内森·德雷克（汤姆·赫兰德 饰）和经验丰富的寻宝者维克多·苏利文（马克·沃尔伯格 饰）组成搭档，追寻费迪南·麦哲伦500年前遗失的宝藏。一开始，这似乎只是个简单的寻宝工作，但很快演变成了一场惊险刺激、横跨全球的竞赛。他们必须赶在冷酷无情的蒙卡达（安东尼奥·班德拉斯 饰）之前寻得宝藏。蒙卡达坚信他和他的家族才是宝藏的正当继承人。若内森和苏利文能破译线索，解开这世界上最古老的谜团，他们便能找到价值50亿美元的宝藏，甚至还可能找到内森失踪已久的哥哥…但首先，他们必须学会通力合作。",
+                "filmType": {
+                    "name": "2D",
+                    "value": 1
+                },
+                "nation": "美国",
+                "language": "",
+                "videoId": "",
+                "premiereAt": 1647216000,
+                "timeType": 3,
+                "runtime": 116,
+                "grade": "7.7",
+                "item": {
+                    "name": "2D",
+                    "type": 1
+                },
+                "isPresale": false,
+                "isSale": false
+            },
+            {
+                "filmId": 5918,
+                "name": "精灵旅社4：变身大冒险",
+                "poster": "https://pic.maizuo.com/usr/movie/ea4450d05d12846769fc40cf4817b847.jpg",
+                "actors": [
+                    {
+                        "name": "德里克·德莱蒙",
+                        "role": "导演",
+                        "avatarAddress": "https://pic.maizuo.com/usr/movie/0f71ec213c2c4654496cbc9aec5eb179.jpg"
+                    },
+                    {
+                        "name": "詹妮弗·克鲁斯卡",
+                        "role": "导演",
+                        "avatarAddress": "https://pic.maizuo.com/usr/movie/b7b7b3511c075d3b9a48b9e7a446a5cb.jpg"
+                    },
+                    {
+                        "name": "布赖恩·哈尔",
+                        "role": "德古拉",
+                        "avatarAddress": "https://pic.maizuo.com/usr/movie/20eafa5093d2f02e23528ae63c67af91.jpg"
+                    },
+                    {
+                        "name": "赛琳娜·戈麦斯",
+                        "role": "梅菲丝",
+                        "avatarAddress": "https://pic.maizuo.com/usr/movie/fdb7244d7acd3ebd00ada41077b599c9.jpg"
+                    },
+                    {
+                        "name": "弗兰·德莱斯切尔",
+                        "role": "演员",
+                        "avatarAddress": "https://pic.maizuo.com/usr/movie/7e1f76fcb2ec72daefdf0f53587c766e.jpg"
+                    }
+                ],
+                "director": "德里克·德莱蒙|詹妮弗·克鲁斯卡",
+                "category": "喜剧|动画|奇幻|冒险",
+                "showDate": [
+                    1649779200
+                ],
+                "synopsis": "在精灵旅社125周年庆典派对上，一场意外使德古拉带领的精灵家族首次变身成人，而约翰尼则成了怪兽。为了寻找治疗方法，这对冤家翁婿前往危机重重的南美雨林开启了一场欢乐又刺激的冒险之旅，遭遇了种种令人捧腹的窘况。得知消息的梅菲斯带领精灵家族前去营救爱人和老爸，他们最终能否将一切恢复正常？",
+                "filmType": {
+                    "name": "2D",
+                    "value": 1
+                },
+                "nation": "美国",
+                "language": "",
+                "videoId": "",
+                "premiereAt": 1648944000,
+                "timeType": 3,
+                "runtime": 88,
+                "grade": "7.2",
+                "item": {
+                    "name": "2D",
+                    "type": 1
+                },
+                "isPresale": false,
+                "isSale": false
+            },
+            {
+                "filmId": 5922,
+                "name": "密室逃生2",
+                "poster": "https://pic.maizuo.com/usr/movie/d6063932247688e34169bee6bb3fae59.jpg",
+                "actors": [
+                    {
+                        "name": "亚当·罗比特尔",
+                        "role": "导演",
+                        "avatarAddress": "https://pic.maizuo.com/usr/movie/47b83a26eeb5343cd165bd3527c01f8f.jpg"
+                    },
+                    {
+                        "name": "泰勒·拉塞尔",
+                        "role": "Zoey Davis",
+                        "avatarAddress": "https://pic.maizuo.com/usr/movie/67a7a2443cf155a92a61aec6ed91b615.jpg"
+                    },
+                    {
+                        "name": "洛根·米勒",
+                        "role": "Ben Miller",
+                        "avatarAddress": "https://pic.maizuo.com/usr/movie/f40be7d1b8fbcc4d1630f708f208b79c.jpg"
+                    },
+                    {
+                        "name": "霍兰·罗登",
+                        "role": "Rachel",
+                        "avatarAddress": "https://pic.maizuo.com/usr/movie/df0c3442bfb8b5c5e0442c5909d629a2.jpg"
+                    },
+                    {
+                        "name": "茵蒂娅·摩尔",
+                        "role": "Brianna",
+                        "avatarAddress": "https://pic.maizuo.com/usr/movie/7f15494014eb40ce4ad9cee6a8727c53.jpg"
+                    }
+                ],
+                "director": "亚当·罗比特尔",
+                "category": "惊悚|动作|悬疑",
+                "showDate": [
+                    1649779200
+                ],
+                "synopsis": "好莱坞惊悚大片《密室逃生2》由《速度与激情》系列金牌制片人重磅打造，前作曾创下中国影史进口惊悚片票房最高纪录。续作在闯关难度和惊险刺激程度上全面升级，集结全球顶级玩家合力解锁超高难度密室，开启危机重重的极限挑战。影片将于2022年4月2日全国上映。",
+                "filmType": {
+                    "name": "2D",
+                    "value": 1
+                },
+                "nation": "美国",
+                "language": "",
+                "videoId": "",
+                "premiereAt": 1648857600,
+                "timeType": 3,
+                "runtime": 88,
+                "grade": "7.3",
+                "item": {
+                    "name": "2D",
+                    "type": 1
+                },
+                "isPresale": false,
+                "isSale": false
+            },
+            {
+                "filmId": 5859,
+                "name": "长津湖之水门桥",
+                "poster": "https://pic.maizuo.com/usr/movie/89689a6d36e155b697ed3e35a6c1da12.jpg",
+                "actors": [
+                    {
+                        "name": "易烊千玺",
+                        "role": "伍万里",
+                        "avatarAddress": "https://pic.maizuo.com/usr/movie/f9b4b9f6f7564b4068aec8d37036459e.jpg"
+                    },
+                    {
+                        "name": "徐克",
+                        "role": "导演",
+                        "avatarAddress": "https://pic.maizuo.com/usr/movie/167312fd73483b00efa169c29663d403.jpg"
+                    },
+                    {
+                        "name": "林超贤",
+                        "role": "导演",
+                        "avatarAddress": "https://pic.maizuo.com/usr/movie/4033b234b72900ee8859fc739afe7e23.jpg"
+                    },
+                    {
+                        "name": "吴京",
+                        "role": "伍千里",
+                        "avatarAddress": "https://pic.maizuo.com/usr/movie/0a8f4a063cce18afa5103a26577c452b.jpg"
+                    },
+                    {
+                        "name": "陈凯歌",
+                        "role": "导演",
+                        "avatarAddress": "https://pic.maizuo.com/usr/movie/7c4f4a21c2bd1fea583c0abbb3e3a137.jpg"
+                    }
+                ],
+                "director": "陈凯歌|徐克|林超贤",
+                "category": "剧情|历史|战争",
+                "showDate": [
+                    1649779200
+                ],
+                "synopsis": "电影《长津湖之水门桥》以抗美援朝战争第二次战役中的长津湖战役为背景，讲述了在结束了新兴里和下碣隅里的战斗之后，七连战士们又接到了更艰巨的任务……",
+                "filmType": {
+                    "name": "4D",
+                    "value": 13
+                },
+                "nation": "中国大陆",
+                "language": "",
+                "videoId": "",
+                "premiereAt": 1643673600,
+                "timeType": 3,
+                "runtime": 149,
+                "grade": "7.4",
+                "item": {
+                    "name": "4D",
+                    "type": 13
+                },
+                "isPresale": false,
+                "isSale": false
+            }
+        ]
+    },
+    "msg": "ok"
+}
