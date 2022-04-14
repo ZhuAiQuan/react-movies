@@ -2,7 +2,7 @@
  * @Description: xingp，yyds
  * @Author: zaq
  * @Date: 2022-04-13 10:52:33
- * @LastEditTime: 2022-04-13 14:04:22
+ * @LastEditTime: 2022-04-14 10:38:08
  * @LastEditors: zaq
  * @Reference: 
  */
@@ -12,6 +12,8 @@ import { LeftOutline, CloseOutline, RightOutline, EnvironmentOutline, PhoneFill 
 import BannerList from './bannerList';
 import DateList from './dateList'
 import './index.less'
+import { data } from "./films.json?json";
+const {films} = data;
 
 export default function CinemaFilm() {
   const {id} = useParams();
@@ -54,8 +56,8 @@ export default function CinemaFilm() {
                 <div className='cinema-addr'>广东省深圳市龙岗区大鹏街道岭南路67号佳兆业广场三楼</div>
                 <div className='tel-icon' ><PhoneFill /></div>
               </div>
-              <BannerList />
-              <DateList />
+              <BannerList films={films} />
+              <DateList films={films} />
             </>
       }
     </div>

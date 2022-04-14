@@ -2,15 +2,19 @@
  * @Description: xingp，yyds
  * @Author: zaq
  * @Date: 2022-04-13 14:01:27
- * @LastEditTime: 2022-04-13 17:05:49
+ * @LastEditTime: 2022-04-14 10:32:48
  * @LastEditors: zaq
  * @Reference:
  */
 import React, { useState, useEffect } from "react";
-import { data } from "./films.json?json";
-const { films } = data;
+import { RightOutline } from 'antd-mobile-icons';
+// import { data } from "./films.json?json";
+import {useNavigate} from 'react-router-dom';
+import bus from '../../libs/bus'
+// const { films } = data;
 
 export default function BannerList(props) {
+  const {films} = props
   // const films = [
   //   {
   //     poster: "https://pic.maizuo.com/usr/movie/46015aa8e08a661e7c559b6e7407ce08.jpg",
@@ -21,6 +25,7 @@ export default function BannerList(props) {
   //     grade: "7.8",
   //   }
   // ]
+  const push = useNavigate()
   const [loopIndex, updateLoopIndex] = useState(0);
   // const [translateX, updateTranslateX] = useState("50%");
   const [moveData, changeData] = useState({
@@ -39,8 +44,11 @@ export default function BannerList(props) {
         defaultX: document.body.offsetWidth / 2 - 45,
         maxX: ((films.length - 1) * 88 - (document.body.offsetWidth / 2 - 45)) * -1
       }
-    })
+    });
   }, []);
+  useEffect(() => {
+    bus.emit('checkFilm', loopIndex)
+  }, [loopIndex])
   function touchStart(e) {
     changeData(Object.assign(moveData, {state: true, startX: e.targetTouches[0].clientX}))
   }
@@ -53,7 +61,7 @@ export default function BannerList(props) {
         moveX: 0,
         startX: 0,
       }
-    })
+    });
   }
   function touchMove(e) {
     if (moveData.state) {
@@ -69,7 +77,7 @@ export default function BannerList(props) {
   // 精准计算移动几个图片 并获取索引值
   function calcLateX(count) {
     const i = Math.round((moveData.defaultX - count - 18)/88);
-    updateLoopIndex(i)
+    updateLoopIndex(i);
     return moveData.defaultX - i*88
   }
   // 补丁 修复在banner首尾时的处理
@@ -80,6 +88,20 @@ export default function BannerList(props) {
       updateLoopIndex(films.length - 1)
     }
     return count
+  }
+  function onCheck(i) {
+    if (loopIndex === i) return
+    updateLoopIndex(i);
+    changeData(data => {
+      return {
+        ...data,
+        translateX: data.defaultX - i * 88
+      }
+    })
+
+  }
+  function onNavigateTo() {
+    push(`/film-detail/${films[loopIndex].filmId}`)
   }
   return (
     <div className="banner-list">
@@ -100,14 +122,14 @@ export default function BannerList(props) {
         >
           {films.map((item, i) => {
             return (
-              <div className={`swiper-item ${i === loopIndex ? 'swiper-actived' : ''}`} key={item.poster}>
+              <div className={`swiper-item ${i === loopIndex ? 'swiper-actived' : ''}`} key={item.poster} onClick={() => onCheck(i)}>
                 <img src={item.poster} />
               </div>
             );
           })}
         </div>
       </div>
-      <div className="film-info">
+      <div className="film-info" onClick={onNavigateTo}>
         <div className="film-name">
           {
             films[loopIndex].name
@@ -128,6 +150,9 @@ export default function BannerList(props) {
           {
             films[loopIndex].director
           }
+        </div>
+        <div className="showTips">
+          <RightOutline />
         </div>
       </div>
     </div>

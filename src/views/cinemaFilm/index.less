@@ -201,7 +201,7 @@
     .film-info {
       padding: 15px 0;
       text-align: center;
-      
+      position: relative;
       .film-name {
         margin-bottom: 10px;
         span {
@@ -216,7 +216,33 @@
       .film-desc {
         text-align: center;
         color: var(--text-color);
+        padding: 0 45px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+      .showTips {
+        position: absolute;
+        right: 0;
+        top: 0;
+        height: 100%;
+        width: 45px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        animation: opacityTips 2s linear infinite;
       }
     }
+  }
+}
+@keyframes opacityTips {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
