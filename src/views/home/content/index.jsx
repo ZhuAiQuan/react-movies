@@ -2,7 +2,7 @@
  * @Description: xingp，yyds
  * @Author: zaq
  * @Date: 2022-02-21 17:17:52
- * @LastEditTime: 2022-04-14 14:55:08
+ * @LastEditTime: 2022-04-14 14:58:02
  * @LastEditors: zaq
  * @Reference: 
  */
@@ -24,7 +24,10 @@ export default function ListContent(props) {
   }, [props.type]);
   useEffect(() => {
     const dom = document.querySelector('.App>.content');
-    dom.addEventListener('scroll', throuch(onScroll))
+    dom.addEventListener('scroll', throuch(onScroll));
+    return () => {
+      dom.removeEventListener('scroll', onScroll)
+    }
   }, []);
   function onScroll(e) {
     const { scrollTop, offsetHeight } = e.target;
