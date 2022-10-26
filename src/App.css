@@ -16,5 +16,6 @@
 .content {
   height: calc(100% - 50px);
   overflow-y: auto;
-  scroll-behavior: smooth
+  scroll-behavior: smooth;
+  padding-bottom: 50px;
 }

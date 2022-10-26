@@ -19,6 +19,7 @@ const Detail = lazy(() => import("@/views/film-info/detail"));
 const AllPhotos = lazy(() => import("@/views/film-info/photos"));
 const LoginPage = lazy(() => import("@/views/login"));
 const CinemaFilm = lazy(() => import("@/views/cinemaFilm"));
+const GeoLocation = lazy(() => import("@/views/geolocation"))
 
 export default function index() {
   return (
@@ -36,6 +37,7 @@ export default function index() {
           <Route path="photos" element={<AllPhotos />}></Route>
           <Route path="login" element={<LoginPage />}></Route>
           <Route path="cinema-film/:id" element={<CinemaFilm />}></Route>
+          <Route path="geo" element={<GeoLocation />}></Route>
           <Route path="404" element={<NotFound />}></Route>
           <Route path="*" element={<Navigate to="404" />}></Route>
         </Routes>

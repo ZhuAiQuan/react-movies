@@ -12,12 +12,24 @@ import ListContent from "./content";
 import Banner from "./banner";
 import "./index.less";
 import { useDispatch, useSelector } from "react-redux";
-import { getGeolocate } from "@/api";
+import { useNavigate } from 'react-router-dom'
+import { getBannerInfo } from '@/api';
+import { throuch } from '@/libs/tools'
 
 export default function Home() {
   const [activeKey, setActiveKey] = useState(1);
+  const [banner, getBannerList] = useState([]);
+  const [loading, setLoading] = useState(false);
+  const [finaily, setFinaily] = useState(false);
+  const [page, setPages] = useState({
+    pageNum: 1,
+    pageSize: 10
+  })
+
   const { cityId, name: cityName } = useSelector(({ app }) => app.locate);
   const dispatch = useDispatch();
+  const push = useNavigate();
+
   const tabs = [
     {
       type: 1,
@@ -28,41 +40,53 @@ export default function Home() {
       title: "即将上映",
     },
   ];
-  useEffect(() => {
-    if (!cityId) {
-      navigator.geolocation.getCurrentPosition(
-        ({ coords }) => {
-          const { longitude, latitude } = coords;
-          dispatch({
-            type: "photo_list",
-            data: {
-              geoInfo: { longitude, latitude },
-            },
-          });
-          getGeolocate(longitude, latitude).then((res) => {
-            if (!res.status) {
-              const { city: locate } = res.data;
-              dispatch({
-                type: "photo_list",
-                data: {
-                  locate,
-                },
-              });
-            }
-          });
-          // test().then(res => {
-          //   console.log(res)
-          // })
-        },
-        (err) => {
-          console.log(err);
-        }
-      );
+  // 去定位页面
+  function changePositon() {
+    push('/geo', { replace: cityName && cityId ? false : true })
+  }
+  function getBanner(id) {
+    getBannerInfo(id).then(res => {
+      if (!+res.status) {
+        const {actionData, name, imgUrl} = res.data;
+        getBannerList([{name, imgUrl, id: JSON.parse(actionData).businessId}])
+      }
+    })
+  }
+  function onScroll(e) {
+    const { scrollTop, offsetHeight } = e.target;
+    if (scrollTop / offsetHeight > 0.7 && !finaily) {// 判断快触底且计算后台字段数据不为空时 获取数据 /需要注意的是再向上滚动时不需要触发更新哦
+      // 准备加载数据了
+      setLoading(true);
+      throuch(request)()
     }
-  }, []);
+  }
+  function request() {
+    debugger
+    if (loading) {
+      console.log(`first`)
+    }
+  }
+  useEffect(() => {
+    if (cityId) {
+      getBanner(cityId)
+    }
+    const target = document.querySelector('.App>.content');
+    target?.addEventListener('scroll', onScroll);
+    return () => {
+      target?.removeEventListener('scroll', onScroll)
+    }
+  }, [])
+  useEffect(() => {
+    const target = document.querySelector('.App>.content');
+    target?.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    })
+  }, [activeKey])
+
   return (
     <>
-      <Banner city={{cityName}} />
+      <Banner cityName={cityName} list={banner} changeGeo={changePositon} />
       <Tabs
         activeKey={activeKey}
         onChange={setActiveKey}
@@ -76,7 +100,7 @@ export default function Home() {
           />
         ))}
       </Tabs>
-      <ListContent type={activeKey} />
+      <ListContent type={activeKey} loading={loading} finaily={finaily} />
     </>
   );
 }

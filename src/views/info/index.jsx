@@ -65,7 +65,7 @@ export default function Info() {
       <div className="info-title"></div>
       {
         infoData.map(item => (
-          <div className="info-item" onClick={toRouterPush(item)}>
+          <div className="info-item" onClick={toRouterPush(item)} key={item.src}>
             <img src={item.src} />
           </div>
         ))
